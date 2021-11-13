@@ -1,0 +1,21 @@
+import React, { useState } from 'react';
+var values=0;
+const UseStateCounter=()=>{
+  const [value,setvalue]=useState(values);
+  const reset=()=>{
+    setvalue(0);
+  }
+return(
+  <>
+<section style={{margin:'4rem 0'}}>
+   <h3> Regular counter</h3>
+   <h1>{value}</h1>
+   <button className='btn' onClick={()=>setvalue(value-1)}>Decrease</button>
+   <button className='btn' onClick={reset}>Reset</button>
+   <button className='btn' onClick={()=>setvalue(value+1)}>Increase</button>
+</section>
+</>
+);
+}
+
+export default UseStateCounter;
